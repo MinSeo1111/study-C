@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+void printstar(int count){
+    for(int i = 0; i < count; i++) 
+    printf("*");
+}
+void printspace(int count){
+    for(int i = 0; i < count; i++) 
+    printf(" ");
+}
+
+void exec1()
+{ //삼각형 출력
+    int count = 0;
+    //printf("별 삼각형 출력기능입니다.\n"); // 안 써도 됨
+    //printf("몇 줄짜리를 만들까요? : "); // 안 써도 상관없
+    scanf("%d", &count);
+    for(int i = 0; i < count; i++){
+        printspace(count-i-1); 
+        printstar((2*i)+1); 
+        printf("\n"); 
+    }
+}
+
+int main()
+{
+    exec1();
+    return 0;
+}
